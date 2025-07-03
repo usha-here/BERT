@@ -7,11 +7,11 @@ from transformers import (   #transformers: Hugging Face library —
                             #utilities for training (Trainer, TrainingArguments).
     BertTokenizer, 
     BertForSequenceClassification, 
-    Trainer, 
-    TrainingArguments
+    TrainingArguments, 
+    Trainer
 )
 
-# 1. Sample Dataset
+# 1. Sample Dataset 
 data = {
     'text': [
         "My electricity bill is too high this month.",
@@ -19,7 +19,7 @@ data = {
         "Meter reading is showing wrong value.",
         "Why is my power bill double this time?",
         "No electricity in sector 10 since yesterday.",
-        "My meter is not working properly."
+        "My meter is showing some problems."
     ],
     'label': ['Billing', 'Outage', 'Meter', 'Billing', 'Outage', 'Meter']
 }
