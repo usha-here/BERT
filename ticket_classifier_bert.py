@@ -27,4 +27,6 @@ df = pd.DataFrame(data)       #  Converts them to a DataFrame using pandas.
 
 # Label encoding          
 label_map = {'Billing': 0, 'Outage': 1, 'Meter': 2}  #label_map assigns numeric IDs to classes for training (required for BERT).
+reverse_label_map = {v: k for k, v in label_map.items()} #reverse_label_map is used later to convert predictions back to readable labels.
+df['label'] = df['label'].map(label_map) #map the string labels to integers in the DataFrame.
 
