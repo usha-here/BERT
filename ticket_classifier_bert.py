@@ -25,3 +25,6 @@ data = {
 }
 df = pd.DataFrame(data)       #  Converts them to a DataFrame using pandas.
 
+# Label encoding          
+label_map = {'Billing': 0, 'Outage': 1, 'Meter': 2}  #label_map assigns numeric IDs to classes for training (required for BERT).
+
